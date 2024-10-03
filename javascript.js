@@ -10,3 +10,16 @@ let getComputerChoice = () => {
 }
 
 console.log(getComputerChoice());
+
+let getHumanChoice = () => {
+    let userInpput = prompt(`Please provide your choice. (rock, paper, scissor)`);
+
+    while(userInpput !== "rock" && userInpput !== "paper" && userInpput !== "scissor")
+    {
+        userInpput = prompt(`Please provide correct choice. (rock, paper, scissor)`);
+    }
+
+    return userInpput;
+}
+
+console.log(getHumanChoice());
