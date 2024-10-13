@@ -63,34 +63,45 @@ let playRound = (humanChoice, computerChoice) => {
     }
 }
 
+let buttons = document.querySelector('#buttons');
 
-let playGame = () => {
-    let humanScore = 0;
-    let computerScore = 0;
-    let numberOfRounds = 0;
+buttons.addEventListener('click', (event) => {
+    let target = event.target;
 
-    while (numberOfRounds < 5) {
+    const humanSelection = target.id;
+    const computerSelection = getComputerChoice();
 
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
 
-        let result = playRound(humanSelection, computerSelection, humanScore, computerScore);
+});
 
-        if (result === `user`)
-            humanScore++;
-        if (result === `computer`)
-            computerScore++;
+// let playGame = () => {
+//     let humanScore = 0;
+//     let computerScore = 0;
+//     let numberOfRounds = 0;
 
-        numberOfRounds++;
-    }
+//     while (numberOfRounds < 5) {
 
-    if (humanScore === computerScore)
-        console.log(`It's a draw. Nobody won.`);
-    else if (humanScore > computerScore)
-        console.log(`Congratulations on your win.`);
-    else
-        console.log(`You lost. Please try again.`);
+//         const humanSelection = getHumanChoice();
+//         const computerSelection = getComputerChoice();
 
-}
+//         let result = playRound(humanSelection, computerSelection, humanScore, computerScore);
 
-playGame();
+//         if (result === `user`)
+//             humanScore++;
+//         if (result === `computer`)
+//             computerScore++;
+
+//         numberOfRounds++;
+//     }
+
+//     if (humanScore === computerScore)
+//         console.log(`It's a draw. Nobody won.`);
+//     else if (humanScore > computerScore)
+//         console.log(`Congratulations on your win.`);
+//     else
+//         console.log(`You lost. Please try again.`);
+
+// }
+
+// playGame();
