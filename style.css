@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    height: 100vh;
+    width: 100vw;
+}
+
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+#live-score{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+#buttons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#current-round-result{
+    display: flex;
+    justify-content: center;
+}
+
+#game-result{
+    display: flex;
+    justify-content: center;
+}
